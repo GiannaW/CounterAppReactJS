@@ -1,0 +1,469 @@
+/* generated from dna-version: 5.13.0 */
+/* generated from dna-version: 5.13.0 */
+.spectrum-Tooltip {
+    visibility: hidden;
+  
+    opacity: 0;
+  
+    transition: transform 130ms ease-in-out,
+                opacity 130ms ease-in-out,
+                visibility 0ms linear 130ms;
+  
+    pointer-events: none;
+  }
+  .spectrum-Tooltip.is-open {
+    visibility: visible;
+  
+    opacity: 1;
+  
+    transition-delay: 0ms;
+  
+    pointer-events: auto;
+  }
+  .spectrum-Tooltip--bottom.is-open {
+    transform: translateY(6px);
+  }
+  .spectrum-Tooltip--top.is-open {
+    transform: translateY(-6px);
+  }
+  .spectrum-Tooltip--right.is-open {
+    transform: translateX(6px);
+  }
+  .spectrum-Tooltip--left.is-open {
+    transform: translateX(-6px);
+  }
+  :root {
+    /* This variable needs to be updated in Spectrum DNA. Using the height variable so it scales to spectrum-large */
+  }
+  /* topdoc
+  {{ tooltip/tooltip.yml }}
+  */
+  .spectrum-Tooltip {
+  
+    position: relative;
+    left: 0px;
+    top: 0px;
+  
+    display: -ms-inline-flexbox;
+  
+    display: inline-flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    box-sizing: border-box;
+  
+    vertical-align: top;
+  
+    width: auto;
+    padding: 4px 10px;
+    border-radius: 4px;
+    min-height: 24px;
+  
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    word-break: break-word;
+    -webkit-font-smoothing: antialiased;
+  }
+  .spectrum-Tooltip {
+      cursor: default;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  .spectrum-Tooltip-tip {
+    position: absolute;
+  
+    height: 0;
+    width: 0;
+  
+    border-width: 4px;
+    border-style: solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+  .spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--left .spectrum-Tooltip-tip {
+      top: 50%;
+      margin-top: -4px;
+    }
+  .spectrum-Tooltip--right {
+    margin-left: 3px;
+  }
+  .spectrum-Tooltip--right .spectrum-Tooltip-tip {
+      right: 100%;
+      transform: rotate(90deg);
+    }
+  .spectrum-Tooltip--left {
+    margin-right: 3px;
+  }
+  .spectrum-Tooltip--left .spectrum-Tooltip-tip {
+      left: 100%;
+      transform: rotate(-90deg);
+    }
+  .spectrum-Tooltip--top {
+    margin-bottom: 3px;
+  }
+  .spectrum-Tooltip--top .spectrum-Tooltip-tip {
+      top: 100%;
+    }
+  .spectrum-Tooltip--bottom {
+    margin-top: 3px;
+  }
+  .spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
+      bottom: 100%;
+      transform: rotate(-180deg);
+    }
+  .spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--top .spectrum-Tooltip-tip {
+      left: 50%;
+      margin-left: -4px;
+    }
+  .spectrum-Tooltip-typeIcon {
+    margin-left: -2px;
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  
+    /* Adjusts for weird misalignment */
+    margin-top: 1px;
+  }
+  .spectrum-Tooltip-label {
+    max-width: 101px;
+  
+    /* Make sure line height is correct to prevent problems in Windows */
+    line-height: 16px;
+  }
+  .u-tooltip-showOnHover {
+    display: inline-block;
+    position: relative;
+  }
+  .u-tooltip-showOnHover .spectrum-Tooltip {
+      position: absolute;
+      white-space: nowrap;
+      /* Required for animations to work, !important for diff scaling to work */
+      visibility: visible !important;
+      transition: transform 130ms ease-in-out;
+      top: -100%;
+    }
+  .u-tooltip-showOnHover .spectrum-Tooltip-label {
+      /* Don't try to wrap as the mechanism used for this helper does not support wrapping */
+      max-width: none;
+    }
+  .u-tooltip-showOnHover .spectrum-Tooltip--right,
+    .u-tooltip-showOnHover .spectrum-Tooltip--left {
+      top: 50%;
+    }
+  .u-tooltip-showOnHover .spectrum-Tooltip--right .spectrum-Tooltip-tip, .u-tooltip-showOnHover .spectrum-Tooltip--left .spectrum-Tooltip-tip {
+        top: 50%;
+      }
+  .u-tooltip-showOnHover .spectrum-Tooltip--right {
+      left: 100%;
+      transform: translate(0, -50%);
+    }
+  .u-tooltip-showOnHover .spectrum-Tooltip--left {
+      transform: translate(-100%, -50%);
+    }
+  .u-tooltip-showOnHover .spectrum-Tooltip--bottom,
+    .u-tooltip-showOnHover .spectrum-Tooltip--top {
+      left: 50%;
+    }
+  .u-tooltip-showOnHover .spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .u-tooltip-showOnHover .spectrum-Tooltip--top .spectrum-Tooltip-tip {
+        left: 50%;
+      }
+  .u-tooltip-showOnHover .spectrum-Tooltip--bottom {
+      top: 100%;
+      transform: translate(-50%, -8px);
+    }
+  .u-tooltip-showOnHover .spectrum-Tooltip--top {
+      transform: translate(-50%, 8px);
+    }
+  .u-tooltip-showOnHover:hover .spectrum-Tooltip {
+      opacity: 1;
+    }
+  .u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+      transform: translate(-50%, 0);
+    }
+  .u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+      transform: translate(-50%, -8px);
+    }
+  .u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
+      transform: translate(calc(-100% - 8px), -50%);
+    }
+  .u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
+      transform: translate(8px, -50%);
+    }
+  
+  /* generated from dna-version: 5.13.0 */
+  /* generated from dna-version: 5.13.0 */
+  /* Temporary skin variables that need to be moved into origins */
+  :root {
+    /* Icon Button*/
+  
+    /* Button */
+  
+    /* Shell */
+  
+    /* haha remove this */
+  
+    /* Custom selection color for placeholders using global blue-500 at 30% opacity. Should be updated in Spectrum-DNA */
+  }
+  .spectrum--light .spectrum-Tooltip {
+    background-color: rgb(116, 116, 116);
+  
+    color: rgb(255, 255, 255);
+  }
+  .spectrum--light .spectrum-Tooltip-tip {
+    border-top-color: rgb(116, 116, 116);
+  }
+  .spectrum--light .spectrum-Tooltip--negative,
+  .spectrum--light .spectrum-Tooltip--error {
+    background-color: rgb(201, 37, 45);
+  }
+  .spectrum--light .spectrum-Tooltip--negative .spectrum-Tooltip-tip, .spectrum--light .spectrum-Tooltip--error .spectrum-Tooltip-tip {
+      border-top-color: rgb(201, 37, 45);
+    }
+  .spectrum--light .spectrum-Tooltip--info,
+  .spectrum--light .spectrum-Tooltip--help {
+    background-color: rgb(13, 102, 208);
+  }
+  .spectrum--light .spectrum-Tooltip--info .spectrum-Tooltip-tip, .spectrum--light .spectrum-Tooltip--help .spectrum-Tooltip-tip {
+      border-top-color: rgb(13, 102, 208);
+    }
+  .spectrum--light .spectrum-Tooltip--positive,
+  .spectrum--light .spectrum-Tooltip--success {
+    background-color: rgb(18, 128, 92);
+  }
+  .spectrum--light .spectrum-Tooltip--positive .spectrum-Tooltip-tip, .spectrum--light .spectrum-Tooltip--success .spectrum-Tooltip-tip {
+      border-top-color: rgb(18, 128, 92);
+    }
+  
+  .ccd-font-popover .font-tile-wrapper {
+    padding: 0.125rem 0.125rem; }
+    .ccd-font-popover .font-tile-wrapper .font-tile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0.9375rem;
+      justify-content: space-between; }
+      .ccd-font-popover .font-tile-wrapper .font-tile.focus-ring {
+        border-color: #2680eb;
+        box-shadow: 0 0 0 0.1rem #2680eb;
+        border-width: 0.0625rem;
+        border-radius: 0.25rem;
+        outline: none; }
+      .ccd-font-popover .font-tile-wrapper .font-tile:focus {
+        outline: none; }
+    .ccd-font-popover .font-tile-wrapper .font-tile.is-downloading {
+      opacity: 0.5; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-left {
+      padding-right: 1rem;
+      width: 2.125rem; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-middle {
+      display: flex;
+      flex-direction: column; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-middle--heading {
+      padding-right: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: bold;
+      color: #4b4b4b; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-heading--container:hover > .font-tile-icon {
+      display: block; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-icon--checkmark {
+      color: #12805c; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-icon--alert {
+      color: #c9252d; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-right {
+      padding-left: 1rem;
+      margin-left: auto; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-heading--container {
+      cursor: pointer;
+      width: max-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-icon {
+      display: none; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-metadata {
+      font-size: 0.75rem;
+      font-style: normal;
+      color: #6e6e6e; }
+    .ccd-font-popover .font-tile-wrapper .font-tile-link {
+      display: block;
+      cursor: pointer; }
+  
+  .ccd-font-popover .font-panel-footer {
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem; }
+  
+  .ccd-font-popover .font-panel-footer-icon {
+    padding-left: 0.3rem;
+    transform: scale(-1, 1); }
+  
+  .ccd-font-popover .font-panel-hr {
+    margin: 0rem;
+    border: 0.03125rem solid; }
+  
+  .ccd-font-popover {
+    /* .spectrum-menu has display: inline-block which add character
+       * space after block. So we need to make font-size 0 on parent 
+       * element
+       */ }
+    .ccd-font-popover .synced-screen {
+      max-height: 25.5rem;
+      width: 100%;
+      margin: 0rem; }
+    .ccd-font-popover .spectrum-Dialog-content > div {
+      font-size: 0rem; }
+  
+  .ccd-font-popover .font-panel-hr {
+    border-color: #eaeaea; }
+  
+  .ccd-font-popover .waiting-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 29.5rem; }
+  
+  .ccd-font-popover .waiting-screen-info {
+    vertical-align: middle;
+    text-align: center;
+    max-width: 18.75rem;
+    padding-top: 1.5rem;
+    font-size: 1rem;
+    font-style: normal;
+    color: #6e6e6e; }
+  
+  .ccd-font-popover .welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 29.5rem; }
+  
+  .ccd-font-popover .welcome-screen-img-container {
+    padding-bottom: 2rem; }
+  
+  .ccd-font-popover .welcome-screen-img {
+    height: 100%;
+    width: 100%; }
+  
+  .ccd-font-popover .welcome-screen-heading {
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4b4b4b; }
+  
+  .ccd-font-popover .welcome-screen-info {
+    vertical-align: middle;
+    text-align: center;
+    max-width: 18.75rem;
+    padding-bottom: 1.5rem;
+    font-size: 0.75rem;
+    font-style: normal;
+    color: #6e6e6e; }
+  
+  .ccd-font-popover .disable-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 29.5rem; }
+  
+  .ccd-font-popover .disable-screen-img-container {
+    padding-bottom: 1.5rem; }
+  
+  .ccd-font-popover .disable-screen-img {
+    height: 100%;
+    width: 100%; }
+  
+  .ccd-font-popover .disable-screen-heading {
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4b4b4b; }
+  
+  .ccd-font-popover .disable-screen-info {
+    vertical-align: middle;
+    text-align: center;
+    max-width: 18.75rem;
+    font-size: 0.75rem;
+    font-style: normal;
+    color: #6e6e6e; }
+  
+  .ccd-font-popover .disable-screen-link {
+    cursor: pointer; }
+  
+  .ccd-font-popover .sync-off-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 29.5rem; }
+  
+  .ccd-font-popover .sync-off-screen_imgContainer {
+    padding-bottom: 1.5rem; }
+  
+  .ccd-font-popover .sync-off-screen_img {
+    height: 100%;
+    width: 100%; }
+  
+  .ccd-font-popover .sync-off-screen-heading {
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4b4b4b; }
+  
+  .ccd-font-popover .sync-off-screen-info {
+    vertical-align: middle;
+    text-align: center;
+    max-width: 18.75rem;
+    padding-bottom: 1.5rem;
+    font-size: 0.75rem;
+    font-style: normal;
+    color: #6e6e6e; }
+  
+  .ccd-font-popover .update-error-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 29.5rem; }
+  
+  .ccd-font-popover .update-error-screen-info {
+    vertical-align: middle;
+    text-align: center;
+    max-width: 18.75rem;
+    font-size: 0.75rem;
+    font-style: normal;
+    color: #6e6e6e; }
+  
+  .ccd-font-popover .update-error-icon--alert {
+    color: #c9252d; }
+  
+  .ccd-font-popover {
+    margin: 0rem;
+    padding: 0rem !important;
+    width: 25rem; }
+  
+  .ccd-font-tooltip {
+    top: 1.875rem !important; }
+  
+  .ccd-font .stop-pointer-events {
+    pointer-events: none; }
+  
+  
