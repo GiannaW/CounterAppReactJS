@@ -11,4 +11,4 @@ Runs the app in the development mode to local server.
 <img src="https://media.giphy.com/media/JPb2DFpAS9CPrfAjMm/giphy.gif" width="480" height="300">
 
 
-<img src= "https://media.giphy.com/media/cL4xLybgogrhrTu0rE/giphy.gif" width=200><br>
+
